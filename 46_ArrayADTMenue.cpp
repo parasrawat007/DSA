@@ -232,7 +232,7 @@ struct Array *Merge(struct Array *arr1, struct Array *arr2)
 {
     int i, j, k;
     i = j = k = 0;
-    struct Array *arr3 = (struct Array *)malloc((arr1->length + arr2->length) * sizeof(int));
+    struct Array *arr3 = (struct Array *)malloc(sizeof(struct Array));
 
     while (i < arr1->length && j < arr2->length)
     {
@@ -250,7 +250,7 @@ struct Array *Merge(struct Array *arr1, struct Array *arr2)
         arr3->A[k++] = arr2->A[j];
     }
     arr3->length = arr1->length + arr2->length;
-    arr3->size = arr1->length + arr2->length;
+    arr3->size = 10;
     return arr3;
 }
 
@@ -258,7 +258,7 @@ struct Array *Union(struct Array *arr1, struct Array *arr2)
 {
     int i, j, k;
     i = j = k = 0;
-    struct Array *arr3 = (struct Array *)malloc((arr1->length + arr2->length) * sizeof(int));
+    struct Array *arr3 = (struct Array *)malloc(sizeof(struct Array));
 
     while (i < arr1->length && j < arr2->length)
     {
@@ -289,7 +289,7 @@ struct Array *InterSection(struct Array *arr1, struct Array *arr2)
 {
     int i, j, k;
     i = j = k = 0;
-    struct Array *arr3 = (struct Array *)malloc((arr1->length + arr2->length) * sizeof(int));
+    struct Array *arr3 = (struct Array *)malloc(sizeof(struct Array));
 
     while (i < arr1->length && j < arr2->length)
     {
@@ -312,7 +312,7 @@ struct Array *Diffrence(struct Array *arr1, struct Array *arr2)
 {
     int i, j, k;
     i = j = k = 0;
-    struct Array *arr3 = (struct Array *)malloc((arr1->length + arr2->length) * sizeof(int));
+    struct Array *arr3 = (struct Array *)malloc(sizeof(struct Array));
 
     while (i < arr1->length && j < arr2->length)
     {
