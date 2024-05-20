@@ -7,7 +7,7 @@ int main()
     
     int n=10;
     int l=A[0];
-    int h=A[9];
+    int h=A[9]+1;
 
     int *H= new int[h];
 
