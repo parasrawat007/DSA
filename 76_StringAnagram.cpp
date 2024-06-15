@@ -16,7 +16,7 @@ int main()
     for ( i = 0; B[i]!='\0'; i++)
     {
         H[B[i]-97]--;
-        if(H[i]!=0)
+        if(H[i]<0)
         {
             cout<<"Not Anagram";
             break;
