@@ -29,7 +29,7 @@ void LowerTri ::Set(int i, int j, int x)
 {
     if (i >= j)
     {
-        A[i * (i - 1) / 2 + j - 1] = x;
+        A[n*(j-1)-(j-2)*(j-1)/2+i-j] = x;
     }
 }
 
@@ -37,7 +37,7 @@ int LowerTri ::Get(int i, int j)
 {
     if (i >= j)
     {
-        return A[i * (i - 1) / 2 + j - 1];
+        return A[n*(j-1)-(j-2)*(j-1)/2+i-j];
     }
     return 0;
 }
@@ -50,7 +50,7 @@ void LowerTri::Display()
         for (int j = 1; j <= n; j++)
         {
             if(i>=j)
-                cout << A[i * (i - 1) / 2 + j - 1] << " ";
+                cout << A[n*(j-1)-(j-2)*(j-1)/2+(i-j)] << " ";
             else
                 cout<<"0 ";
         }
