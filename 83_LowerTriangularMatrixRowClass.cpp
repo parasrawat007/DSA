@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-class LowerTriRow
+class LowerTri
 {
 private:
     int *A;
