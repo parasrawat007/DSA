@@ -17,7 +17,7 @@ void create(struct Poly *p)
 {
     cout<<"Enter number of terms ::";
     cin>>p->n;
-    p->term=(struct Term*) malloc(sizeof(struct Term)*p->n);
+    p->term=new Term[p->n];
 
     cout<<"Enter terms ::"<<endl;
     for (int i = 0; i < p->n; i++)
